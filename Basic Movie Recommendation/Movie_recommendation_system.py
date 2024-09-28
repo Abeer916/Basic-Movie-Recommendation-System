@@ -31,7 +31,8 @@ def movie_recommender_engine(movie_name, n_recs=5):
     recommended_movies = movies_data['title'].iloc[top_movie_indices].reset_index(drop=True)
     return recommended_movies
 
-recommended_movies = movie_recommender_engine("The Dark Knight", n_recs=5)
+movie_name_input = input("Enter a movie name: ")
+recommended_movies = movie_recommender_engine(movie_name_input, n_recs=5)
 
 print("Recommended Movies:")
 print(recommended_movies)
